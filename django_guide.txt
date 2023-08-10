@@ -1,3 +1,18 @@
 Install: pip3 install django
-For create a new django proyect run the following command:
+For create a new django project run the following command:
 django-admin startproject name_of_proyect.
+To run the server:
+python3 manage.py runserver
+To create new application (section of the web app) on django: 
+pyhton3 manage.py startapp name_of_app
+
+
+
+
+
+
+
+
+
+
+https://docs.djangoproject.com/en/4.2/intro/tutorial01/
