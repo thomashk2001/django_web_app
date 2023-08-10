@@ -20,4 +20,5 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include("products.urls")), # Connects the myshop url to the url of products app
+    # the '' specifies the main url .com/ and to search all products url using the include
 ]
