@@ -6,14 +6,7 @@ noindex, nofollow for no indexing -->
 {%block title%} Signup{%endblock%}
 {%block body%}
 <!-- ***************** header ***************** -->
-<img src="image/brand-logo.svg" width="100" alt="myshop logo">
-<nav class="main-nav">
-    <a href="index.html" id="selected">Home</a>
-    <a href="shop.html">Shop</a>
-    <a href="contact.html">Contact</a>
-    <a href="profile.html">Profile</a>
-    <a href="signup.html">Signup</a>
-</nav>
+{% include "includes/nav.html" %}
 
 <form>
     <label for="name">Full Name:</label><br>
