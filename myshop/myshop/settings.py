@@ -55,7 +55,9 @@ ROOT_URLCONF = 'myshop.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / "templates",],# here we add the direction of our template folder
+        # we use the BASE_DIR constant that targets the main folder of the web app and from there we specify
+        # our folder that contains the templates.
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
