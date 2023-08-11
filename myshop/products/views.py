@@ -15,8 +15,13 @@ def index(request):
     "product_numb":produdct_numb,
     })
 def product_cat(request, product):
+  # the parameter product is basically what comes after the second slash because
+  # it was specified that way on the url.py 
+  # TODO: Search for multiple parameter pass via url
   accepted_products = ('suit', 'dress', 'shoes', 'shit')
-  if product.lower in accepted_products:
+  if product.lower() in accepted_products:
     return HttpResponse(f"Here is a list of our {product}")
   else:
     return HttpResponseNotFound("Object not found")
+def signup(request):
+  return render(request, "products/signup.html")
