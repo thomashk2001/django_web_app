@@ -1,5 +1,9 @@
 https://docs.djangoproject.com/en/4.1/ref/templates/builtins/
 
+https://docs.djangoproject.com/en/4.2/howto/static-files/
+READ HOW TO DEPLOY DEJANGO ON PROD
+https://forum.djangoproject.com/t/django-static-files-in-deployment-debug-false/16675
+READ HOW TO DEPLY STATIC FILES ON PROD
 
 read this later once you start needing to repeat code or condition code of html
 using django

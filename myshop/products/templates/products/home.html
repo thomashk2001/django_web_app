@@ -1,8 +1,10 @@
 {% extends 'base.html' %}
+{% load static  %} <!--Needed to load the css files and static files-->
 {%block description%}"This is my description"{%endblock%}
 {%block robots%}index, follow{%endblock%} <!-- Indicates search engines to index
 noindex, nofollow for no indexing -->
 {%block keywords%}modern black suits, myshop{%endblock%}
+{%block css %}{%static "products/style.css"%}{%endblock%}
 {%block title%}MyshopNew{%endblock%}
 {%block body%}
 <!-- ***************** header ***************** -->

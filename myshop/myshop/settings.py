@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticfiles',
+    'django.contrib.staticfiles', # needed for static files such as css ,img, vids
     'products', # adds our created web app
 ]
 
@@ -125,3 +125,11 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+
+# add this to add an static global folder to the proyect !!!!
+
+STATICFILES_DIRS = [
+    BASE_DIR / "static" # using base dir thar is the root of the project we add folder
+]

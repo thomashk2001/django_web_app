@@ -1,9 +1,11 @@
 {% extends 'base.html' %}
+{%load static%}
 {%block description%}"You can create an account here!"{%endblock%}
 {%block robots%}index, follow{%endblock%} <!-- Indicates search engines to index
 noindex, nofollow for no indexing -->
 {%block keywords%}myshop, Signup{%endblock%}
 {%block title%} Signup{%endblock%}
+{%block css %}{%static "products/signup.css"%}{%endblock%}
 {%block body%}
 <!-- ***************** header ***************** -->
 {% include "includes/nav.html" %}
