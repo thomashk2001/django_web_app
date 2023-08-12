@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles', # needed for static files such as css ,img, vids
     'products', # adds our created web app
+    'users'
 ]
 
 MIDDLEWARE = [
