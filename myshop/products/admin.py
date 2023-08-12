@@ -1,3 +1,4 @@
 from django.contrib import admin
-
+from .models import Shirt
 # Register your models here.
+admin.site.register(Shirt) # add this command to import models you created

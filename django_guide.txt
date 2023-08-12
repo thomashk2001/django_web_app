@@ -5,8 +5,15 @@ To run the server:
 python3 manage.py runserver
 To create new application (section of the web app) on django: 
 pyhton3 manage.py startapp name_of_app
-
-
+To update data base models run:
+python3 manage.py makemigrations
+To save models to db run:
+python3 manage.py migrate
+To create admin super user:
+python3 manage.py createsuperuser
+To access admin panel: 
+user: user
+password: Password123
 
 
 
