@@ -7,6 +7,8 @@ class Shirt(models.Model):
   brand = models.CharField(max_length= 50, null= True) # db level
   description = models.TextField(blank=True) # app level
   is_bestseller = models.BooleanField(default=False)
+  def __str__(self):
+    return f"{self.title}"
   # in other types of data both must be set. see blank vs null 
 # create a an instance of the model as an object and use .save() to save to db
 # to get data:
@@ -17,3 +19,17 @@ class Shirt(models.Model):
 # Shirt.objects.filter(attribute = value or condition).exists()
 # to update get the model in a variable then change attribute then call .save()
 # to delete get the model in a variable and then call .delete()
+# to use Find it does not understand <=, >=, we need to use field look ups. PDF.
+# Example .filter(price<20) translate to .filter(price__lt=25).
+# we use , as AND ex ,filter(x = val, y = val)
+# for OR we need to import django.db.models import Q and then
+#.filter(Q(x = val) | Q(y = val))
+class Product(models.Model):
+  title = models.CharField(max_length= 70)
+  description = models.TextField()
+  category = models.CharField(max_length= 50)
+  image = models.ImageField(blank=True, null= True)
+  brand = models.CharField(max_length= 50)
+  price = models.PositiveIntegerField()
+  def __str__(self):
+    return f"{self.title}"

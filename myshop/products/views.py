@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.http import HttpResponseNotFound
-import django.http as dj
+from .models import Product
 # Create your views here.
 
 def index(request):
@@ -10,9 +10,11 @@ def index(request):
   # it takes another file with the same name on a different web app
   # takes a third parameter that is a dictionary to pass content to the html file
   produdct_numb = "4"
+  products = Product.objects.all()
   return render(request, "products/home.html",{
     "name": "tom",
     "product_numb":produdct_numb,
+    "products": products,
     })
 def product_cat(request, product):
   # the parameter product is basically what comes after the second slash because
