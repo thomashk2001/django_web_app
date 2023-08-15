@@ -10,7 +10,7 @@ def index(request):
   # it takes another file with the same name on a different web app
   # takes a third parameter that is a dictionary to pass content to the html file
   produdct_numb = "4"
-  products = Product.objects.all()
+  products = Product.objects.all().order_by('id')[:4] # order by id and just shows for if i want lated i must order by -id
   return render(request, "products/home.html",{
     "name": "tom",
     "product_numb":produdct_numb,
