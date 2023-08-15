@@ -33,6 +33,7 @@ class Product(models.Model):
   brand = models.CharField(max_length= 50)
   price = models.PositiveIntegerField()
   slug = models.SlugField(default=0)
+  is_bestseller = models.BooleanField(default=False)
   def __str__(self):
     return f"{self.title}"
   def save(self, *args, **kwargs):
