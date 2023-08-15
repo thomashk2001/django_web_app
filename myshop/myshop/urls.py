@@ -15,10 +15,14 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import path, include # MUST BE ADDED!
+from django.conf.urls.static import static
+from django.conf import settings
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include("products.urls")), # Connects the myshop url to the url of products app
     # the '' specifies the main url .com/ and to search all products url using the include
-]
+] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT) # MUST BE ADDED TO LOAD MEDIA FROM OBJECTS ATTRIBUTE .URL
+# Specifies the url it has to use and where the media es located.

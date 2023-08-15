@@ -134,3 +134,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 STATICFILES_DIRS = [
     BASE_DIR / "static" # using base dir thar is the root of the project we add folder
 ]
+
+MEDIA_ROOT = BASE_DIR / "uploads"  # added this to specify the root location of the media that is uploaded
+# adds permission to images to show using their own url, MUST be set to images can be serve via . url
+MEDIA_URL_ = "/media/"

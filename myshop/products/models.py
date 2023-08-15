@@ -28,7 +28,8 @@ class Product(models.Model):
   title = models.CharField(max_length= 70)
   description = models.TextField()
   category = models.CharField(max_length= 50)
-  image = models.ImageField(blank=True, null= True)
+  image = models.ImageField(blank=True, null= True, upload_to='product_img')
+  # upload_to specifies where inside the root media directory the image is added.
   brand = models.CharField(max_length= 50)
   price = models.PositiveIntegerField()
   def __str__(self):

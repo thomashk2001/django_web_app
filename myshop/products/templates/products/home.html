@@ -44,7 +44,8 @@ noindex, nofollow for no indexing -->
   {%for product in products%}
     <div class="product-card">
         <div class="review-con"><p>Reviews 4.8⭐</p></div>
-        <img src="{%static "products/img/suit-1.png"%}" class="product-img">
+        <!--Gets Image atribute and then the URL location of the file-->
+        <img src="{{product.image.url}}" class="product-img">
         <div style="padding:20px 25px">
             <h3>{{product.title}}</h3>
             <p>{{product.description}}</p>

@@ -8,4 +8,5 @@ urlpatterns = [ # matched urls request views.
     # to add more params use /<param01>/<param02>
     path('signup', views.signup, name="signup"), # signup page, tried using products/signup didn't
     # work since it was getting captured by products/<product> so a different url was needed
+    
 ]
