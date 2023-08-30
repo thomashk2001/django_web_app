@@ -36,6 +36,7 @@ class Product(models.Model):
   is_bestseller = models.BooleanField(default=False)
   def __str__(self):
     return f"{self.title}"
+  # Assign the same id of the saved product to the slug so the url can be created!
   def save(self, *args, **kwargs):
     super().save(*args, **kwargs)
     self.slug = self.id

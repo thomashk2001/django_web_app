@@ -136,5 +136,5 @@ STATICFILES_DIRS = [
 ]
 
 MEDIA_ROOT = BASE_DIR / "uploads"  # added this to specify the root location of the media that is uploaded
-# adds permission to images to show using their own url, MUST be set to images can be serve via . url
+# adds permission to images to show using their own url, MUST be set to images can be serve via . url property on html file
 MEDIA_URL_ = "/media/"
